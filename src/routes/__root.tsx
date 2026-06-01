@@ -72,11 +72,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "BRB-merch" },
+      {
+        name: "description",
+        content:
+          "Zet uw mail op de lijst, stem mee en zie als eerste hints en updates rond de toekomstige Backeljau-drop.",
+      },
+      { name: "application-name", content: "BRB-merch" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "BRB-merch" },
+      {
+        property: "og:description",
+        content: "Schrijf u in, stem mee en zie de eerste hints vóór de rest.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },

@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base: "/backeljau-insider-club-main/",
+  base: "/BRB-merch/",
   root: "pages",
   publicDir: "public",
   plugins: [react(), tailwindcss(), tsconfigPaths()],
