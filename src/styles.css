@@ -1,0 +1,108 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+/* Cooper Black via web font */
+@import url('https://fonts.cdnfonts.com/css/cooper-black');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-pink: var(--pink);
+  --color-pink-soft: var(--pink-soft);
+  --color-yellow: var(--yellow);
+  --color-cream: var(--cream);
+  --color-turquoise: var(--turquoise);
+  --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-bordeaux: var(--bordeaux);
+  --color-ink: var(--ink);
+  --font-display: 'Cooper Black', 'Cooper Std Black', Georgia, serif;
+  --font-sans: 'Cooper Black', 'Cooper Std Black', Georgia, serif;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Brand palette */
+  --pink: oklch(0.62 0.18 0);
+  --pink-soft: oklch(0.68 0.13 358);
+  --yellow: oklch(0.86 0.16 90);
+  --cream: oklch(0.94 0.08 95);
+  --turquoise: oklch(0.74 0.11 200);
+  --green: oklch(0.65 0.16 140);
+  --green-dark: oklch(0.45 0.14 140);
+  --bordeaux: oklch(0.49 0.16 15);
+  --ink: oklch(0.18 0.02 30);
+
+  /* Shadcn semantic mapping */
+  --background: var(--pink);
+  --foreground: var(--ink);
+  --card: var(--cream);
+  --card-foreground: var(--ink);
+  --popover: var(--cream);
+  --popover-foreground: var(--ink);
+  --primary: var(--yellow);
+  --primary-foreground: var(--ink);
+  --secondary: var(--turquoise);
+  --secondary-foreground: var(--ink);
+  --muted: var(--cream);
+  --muted-foreground: oklch(0.4 0.04 30);
+  --accent: var(--turquoise);
+  --accent-foreground: var(--ink);
+  --destructive: var(--bordeaux);
+  --destructive-foreground: var(--cream);
+  --border: var(--ink);
+  --input: var(--ink);
+  --ring: var(--bordeaux);
+
+  --shadow-chunky: 6px 6px 0 0 var(--ink);
+  --shadow-chunky-lg: 10px 10px 0 0 var(--ink);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6, .font-display, button, input, textarea, select, label, a {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .shadow-chunky { box-shadow: 6px 6px 0 0 var(--ink); }
+  .shadow-chunky-lg { box-shadow: 10px 10px 0 0 var(--ink); }
+  .text-shadow-chunky {
+    text-shadow: 4px 4px 0 var(--ink);
+  }
+  .text-shadow-chunky-lg {
+    text-shadow: 6px 6px 0 var(--ink);
+  }
+  .border-ink { border-color: var(--ink); }
+}
